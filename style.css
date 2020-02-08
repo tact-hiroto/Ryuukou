@@ -3,15 +3,20 @@
     padding: 0;
     border: 0px;
 }
-
 @font-face {
-    font-family: "Mutsuki-dev";
-    font-weight: 600;
-    src: url("../Mutsuki.woff2") format("woff2"), url("../Mutsuki.woff") format("woff");
+   font-family: font1;
+   src: url('font/ackaisyo.ttf') format("truetype");
 }
-
+@font-face {
+   font-family: font2;
+   src: url('font/ipaexg.ttf') format("truetype");
+}
 html {
-    font-family: "Mutsuki-dev", "Yu Mincho", serif;
+/*    font-family: font1;*/
+}
+body{
+    height: 4500px;
+    background-color: white;
 }
 
 @media screen and ( min-width:480px) {
@@ -19,32 +24,184 @@ html {
 }
 
 @media screen and ( max-width:479px) {
-    .nav{
-        width: 100%;
-        height: 60px;
+    .back-box {
+        background: url(img/wawasi.png);
+        height: 4500px;
     }
-    .P1{
-        padding-top: 50px;
-        width: 100%;
-        height: 444px;
+    .nav {
+        
+        height:;
+    }
+    h1{
+        font-family: font2;
+        padding-top: 1em;
+        text-align: center;
+        font-size: 44px;
+    }
+    .about{
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: 18px;
+        font-family: font2;
+        line-height: 1.5em;
+    }
+    .P1 {
+        height: 360px;
+        font-family: font1;
+        background-color: rgb(45, 193, 0, 0.25);
+        background-image: linear-gradient(45deg, rgba(0, 204, 63, 0.25) 25%, transparent 25%,
+        transparent 75%, rgba(0, 204, 63, 0.25) 75%, rgba(0, 204, 63, 0.25)),
+        linear-gradient(-45deg, rgba(0, 204, 63, 0.25) 25%, transparent 25%,
+        transparent 75%, rgba(0, 204, 63, 0.25) 75%, rgba(0, 204, 63, 0.25));
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+    }
+    .Decoration01{
+        height: 30px;
+        overflow: hidden;
+    }
+    .Decoration02{
+        position: absolute;
+        z-index: 10;
+    }
+    .deco01{
+        width: 150px;
+        margin-top: 20px;
+    }
+    .deco02{
+        margin-left: 80px;
+    }
+    .deco03{
+        width: 150px;
+        margin-left: 220px;
+    }
+    .P1-box{
+        z-index: 9;
+        position: relative;
+        height: 230px;
+        border: 4px solid #82636b;
+        border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
+        margin-left: 7em;
+        margin-right: 7em;
+        padding: 2em;
+        background: url(img/wasi.png);
     }
     .title-fade {
         writing-mode: vertical-rl;
-        font-size: 95px;
-        margin-left: 160px;
+        font-size: 75px; 
     }
-    .Detail-text {
-        
-        writing-mode: vertical-rl;
-        font-size: 16px;
-        margin-left: 80px;
+    .P2-content-box{
+        overflow: hidden;
+    }
+    .P02 {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        background-color: rgba(0, 128, 0, 0.55);
+        /* きみどり */
+    }
+    .P02::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top: 40px solid transparent;
+        /* 透明 */
+        border-left: 50vw solid transparent;
+        /* 透明 */
+        border-right: 50vw solid #e8e5c4;
+        border-bottom: 40px solid #e8e5c4;
     }
     .P2{
+        height: 342px;
         width: 100%;
-        height: 222px;
+        background-color: #e8e5c4;
+    }
+   
+    .P3-content-box{
+        overflow: hidden;
+    }
+    .P03 {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        background-color: rgba(0, 128, 0, 0.55);
+        /* きみどり */
+    }
+    .P03::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top: 40px solid transparent;
+        /* 透明 */
+        border-right: 50vw solid transparent;
+        /* 透明 */
+        border-left: 50vw solid #e8e5c4;
+        border-bottom: 40px solid #e8e5c4;
     }
     .P3{
+        height: 342px;
         width: 100%;
-        height: 222px;
+        background-color: #e8e5c4;
     }
+    .P3-img{
+        height: 342px
+    }
+    .syamisen{
+        width: 220px;
+    }
+    .syamisen2{
+        width: 220px;
+    }
+.P4-content-box{
+        overflow: hidden;
+    }
+    .P04 {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        background-color: rgba(0, 128, 0, 0.55);
+        /* きみどり */
+    }
+    .P04::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top: 40px solid transparent;
+        /* 透明 */
+        border-left: 50vw solid transparent;
+        /* 透明 */
+        border-right: 50vw solid #e8e5c4;
+        border-bottom: 40px solid #e8e5c4;
+    }
+    .P4{
+        height: 342px;
+        width: 100%;
+        background-color: #e8e5c4;
+    }
+    .P4-img{
+        height: 342px
+    }
+    
+    .P5-content-box{
+    }
+    .P05 {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        background-color: rgba(0, 128, 0, 0.55);
+        /* きみどり */
+    }
+    .P5{
+        height: 900px;
+        width: 100%;
+        background-color: #e8e5c4;
+    }
+    
 }
