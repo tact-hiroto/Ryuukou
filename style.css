@@ -24,7 +24,7 @@ body {
 }
 
 @media screen and ( min-width:380px) {
-    .phone{
+    .phone {
         display: none;
     }
 }
@@ -71,8 +71,10 @@ body {
         position: relative;
         overflow: hidden;
         z-index: 1;
+        font-family: font2;
+
     }
-    
+
     .about {
         padding-top: 0.5em;
         padding-left: 1em;
@@ -184,7 +186,7 @@ body {
         background-color: #e8e5c4;
     }
     .P3-img {
-        
+        margin-top: 10px;
     }
     .syamisen {
         width: 100%;
@@ -217,9 +219,7 @@ body {
         width: 100%;
         background-color: #e8e5c4;
     }
-    .P4-img {
-        
-    }
+    .P4-img {}
 
     .P5-content-box {}
     .P05 {
@@ -237,11 +237,74 @@ body {
     }
 
 }
-.decobox{
- padding: 0.5em 1em;
+
+.decobox {
+    padding: 0.5em 1em;
     border: double 5px #4ec4d3;
 }
+
 .decobox p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
+
+.grad-item {
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+    /*隠した状態の高さ*/
+}
+
+.grad-item::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    /*グラデーションで隠す高さ*/
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%, #fff 100%);
+    background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%, #fff 100%);
+    content: "";
+}
+
+.grad-trigger1 {
+    display: none;
+    /*チェックボックスは常に非表示*/
+}
+
+.grad-trigger1:checked + .grad-btn {
+    display: none;
+    /*チェックされていたら、grad-btnを非表示にする*/
+}
+
+.grad-trigger1:checked ~ .grad-item {
+    height: auto;
+    /*チェックされていたら、高さを戻す*/
+}
+
+.grad-trigger1:checked ~ .grad-item::before {
+    display: none;
+    /*チェックされていたら、grad-itemのbeforeを非表示にする*/
+}
+
+.grad-btn {
+    z-index: 2;
+    position: absolute;
+    font-family: font2;
+    right: 0;
+    /*    bottom: 0;*/
+    left: 0;
+    width: 148px;
+    margin: auto;
+    padding: .5em 0;
+    border-radius: 2px;
+    background: #9ec34b;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
+
